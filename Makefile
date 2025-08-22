@@ -25,20 +25,22 @@ SRC = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c \
 	  ft_strmapi.c ft_striteri.c ft_putchar_fd.c \
 	  ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
 
-OBJ = $(SRC:.c=.o)
+OBJDIR = obj_libft
+OBJ = $(addprefix $(OBJDIR)/, $(SRC:.c=.o))
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
 		ar rcs $@ $^
 
-%.o: %.c $(HEADER)
+$(OBJDIR)/%.o: %.c $(HEADER)
+		@mkdir -p $(OBJDIR)
 		$(CC) $(CFLAGS) -c $< -o $@
 
 .PHONY: clean fclean all re
 
 clean: 
-		rm -rf $(OBJ)
+		rm -rf $(OBJDIR)
 fclean: clean
 		rm -rf $(NAME)
 
