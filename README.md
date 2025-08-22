@@ -29,6 +29,10 @@ Add `libft` as a **submodule**:
 git submodule add git@github.com:grignetta/42_libft.git libft
 git submodule update --init --recursive
 ```
+Update libft to the newest version:
+```bash
+git submodule update --remote libft
+```
 
 Update your project Makefile:
 
