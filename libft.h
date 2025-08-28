@@ -53,5 +53,6 @@ int		ft_tolower(int c);
 int		ft_toupper(int c);
 char	*ft_strtok(char *str, const char *delim);
 int     ft_strcmp(const char *s1, const char *s2);
+int     ft_isspace(char c);
 
 #endif
