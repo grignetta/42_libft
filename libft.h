@@ -57,5 +57,6 @@ int     ft_strcmp(const char *s1, const char *s2);
 int     ft_isspace(char c);
 int     ft_isnum(char *str);
 double	ft_atof(char *s);
+char	*ft_strcpy(char *dest, const char *src);
 
 #endif
