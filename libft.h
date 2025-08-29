@@ -61,5 +61,6 @@ char	*ft_strcpy(char *dest, const char *src);
 char	*ft_strpbrk(char *str, char *delim);
 int     ft_exact_strcmp(const char *s1, const char *s2);
 void	*ft_realloc(void *ptr, size_t old_size, size_t new_size);
+char	*ft_strcat(char *dest, const char *src);
 
 #endif
